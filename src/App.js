@@ -12,15 +12,20 @@ import Promo from "./components/secure_common_page/Promo";
 import HomePageAdmin from "./components/secure/secure_admin/HomePageAdmin";
 import BookTableUser from "./components/secure/secure_user/BookTableUser";
 import SecureLayoutUser from "./components/secure/secure_user/SecureLayoutUser";
+import MenuPageUser from "./components/secure/secure_user/MenuPageUser";
+import MenuPageAdmin from "./components/secure/secure_admin/MenuPageAdmin";
 
 const App =()=> {
   return (
   <Routes>
     <Route path="/" element={<MainPage/>}/>
     <Route path="*" element={<NotAuthPage/>}/>
+    <Route path="/book" element={<BookTableUser/>}/>    {/*потом убрать*/}
+    <Route path="/menu" element={<MenuPageUser/>}/>      {/*в секюрку*/}
+    <Route path="/menua" element={<MenuPageAdmin/>}/>      {/*в секюрку*/}
     <Route path="/register" element={<RegisterPage/>}/>
     <Route path="/authenticate" element={<AuthPage/>}/>
-    <Route path="/secure" element={<SecureLayoutUser/>}/> {/*user/admin poka wto*/}
+    <Route path="/secure" element={<SecureLayoutAdmin/>}/> {/*user/admin poka wto*/}
         <Route path="home" element={<HomePageAdmin/>}/>
         <Route path="menu-item" element={<MenuItem/>}/>
         <Route path="price-list" element={<PriceList/>}/>

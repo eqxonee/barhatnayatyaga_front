@@ -66,7 +66,7 @@ const SecureLayoutUser = () => {
                             icon: <MinusOutlined/>,
                             label: <Link
                                 to='/secure/book-table'>
-                                Страница брони
+                                Бронь
                             </Link>,
                         },
                         {

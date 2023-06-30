@@ -3,7 +3,7 @@ import React from 'react';
 const HomePageUser = () => {
     return (
         <div>
-            HOME USER
+            Бархатная тяга user
         </div>
     );
 };

@@ -103,7 +103,7 @@ const SecureLayoutUser = () => {
                             icon: <MinusOutlined/>,
                             label: <Link
                                 to='/secure/book-table'>
-                                Страница брони
+                                Бронь
                             </Link>,
                             children: new Array(1).fill(null).map((_, j) => {
 
@@ -111,7 +111,7 @@ const SecureLayoutUser = () => {
                                     key: 18,
                                     label: <Link
                                         to='/secure/book-table-admin'>
-                                        Админ бронь
+                                        Админ лист брони
                                     </Link>
                                 };
                             })
