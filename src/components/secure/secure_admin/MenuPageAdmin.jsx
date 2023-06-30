@@ -8,7 +8,6 @@ const MenuPageAdmin = () => (
             width: 300,
         }}
         cover={
-
             <img
                 alt="example"
                 src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
