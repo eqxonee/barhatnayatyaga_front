@@ -8,6 +8,7 @@ const NotAuthPage = () => {
         <div>
             <h1>Зона для авторизированных пользователей</h1>
             <Link to="/register"><Button type="primary">Регистрация</Button> </Link>
+
             <Link to="/authenticate"><Button type="primary">Авторизация</Button> </Link>
         </div>
     );
