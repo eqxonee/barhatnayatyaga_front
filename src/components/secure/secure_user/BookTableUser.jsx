@@ -1,4 +1,23 @@
-import { Table } from 'antd';
+import {Modal, Table, Button} from 'antd';
+import {useState} from "react";
+import ButtonModalFromBookUser from "../../modal_window/ButtonModalFromBookUser";
+import {ExclamationCircleOutlined} from "@ant-design/icons";
+
+let modalWindow = new ButtonModalFromBookUser();
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+const confirm = () => {
+    modal.confirm({
+        title: 'Confirm',
+        icon: <ExclamationCircleOutlined />,
+        content: 'Bla bla ...',
+        okText: '确认',
+        cancelText: '取消',
+    });
+};
+
+
+
 const columns = [
     {
         title: 'Номер стола',
@@ -19,7 +38,7 @@ const columns = [
         title: 'Action',
         dataIndex: '',
         key: 'x',
-        render: () => <a>Забронировать стол</a>, /*можно попробовать модальное окно*/
+        render: () => modalWindow()  /*можно попробовать модальное окно*/
     },
 ];
 const data = [
