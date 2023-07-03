@@ -1,44 +1,32 @@
-import {Modal, Table, Button} from 'antd';
-import {useState} from "react";
-import ButtonModalFromBookUser from "../../modal_window/ButtonModalFromBookUser";
-import {ExclamationCircleOutlined} from "@ant-design/icons";
-
-let modalWindow = new ButtonModalFromBookUser();
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-const confirm = () => {
-    modal.confirm({
-        title: 'Confirm',
-        icon: <ExclamationCircleOutlined />,
-        content: 'Bla bla ...',
-        okText: '确认',
-        cancelText: '取消',
-    });
-};
-
-
+import {Button, Image, Modal, Table} from 'antd';
+import React, {useState} from "react";
+import ModalButton from "../../modal/ModalButton";
 
 const columns = [
     {
         title: 'Номер стола',
         dataIndex: 'numberTable',
         key: '1',
+        width: '7%',
     },
     {
         title: 'Свободен с ',
         dataIndex: 'time',
         key: '2',
+        width: '17%',
     },
     {
         title: 'Address',
         dataIndex: 'address',
         key: 'address',
+        width: '37%',
     },
     {
         title: 'Action',
         dataIndex: '',
         key: 'x',
-        render: () => modalWindow()  /*можно попробовать модальное окно*/
+        width: '47%',
+        render:() => <ModalButton/>/*можно попробовать модальное окно*/
     },
 ];
 const data = [
@@ -89,6 +77,5 @@ const BookTableUser = () => (
         dataSource={data}
     />
 );
-
 
 export default BookTableUser;
