@@ -1,6 +1,6 @@
 import {Button, Image, Modal, Table} from 'antd';
 import React, {useState} from "react";
-import ModalButton from "../../modal/ModalButton";
+import ModalButtonFromBookTableUser from "../../modal/ModalButtonFromBookTableUser";
 
 const columns = [
     {
@@ -16,6 +16,12 @@ const columns = [
         width: '17%',
     },
     {
+        title: 'Занят до ',
+        dataIndex: 'time',
+        key: '3',
+        width: '17%',
+    },
+    {
         title: 'Address',
         dataIndex: 'address',
         key: 'address',
@@ -26,7 +32,7 @@ const columns = [
         dataIndex: '',
         key: 'x',
         width: '47%',
-        render:() => <ModalButton/>/*можно попробовать модальное окно*/
+        render:() => <ModalButtonFromBookTableUser/>/*можно попробовать модальное окно*/
     },
 ];
 const data = [
